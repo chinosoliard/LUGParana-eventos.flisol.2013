@@ -1,0 +1,224 @@
+##############################
+1. ABOUT 
+##############################
+
+FliSys is a Web-based open source system that allows 
+regional teams of FLISOL to manage the event with
+ease and efficiency.
+
+The FliSys can also be used to manage other events
+with registered visitors, lectures and workshops.
+
+FliSys is free software and its license
+(contained in the file COPYING) is provided under the GPL.
+
+##############################
+2. QUICK START
+##############################
+
+To start using FliSys, first you must fill in the file
+configuration data with the server that the system is applied
+and the same database. The file can be found at:
+
+/includes/configure.php
+
+(a more detailed explanation of the fields to be filled is below)
+
+After you fill out the information server and database
+you must run Setup to create and populate the tables
+will be used by FliSys. The installation file can be found at:
+
+http://youdomain/flisys/install.php
+
+To update v0.3.3-RC1 to the final version:
+
+http://youdomain/flisys/update.php
+
+For more information and troubleshooting, read the rest of this
+file and the documentation files (see "DOCUMENTATION"). Other
+informations and questions can be consulted on the project page at
+http://sourceforge.net/projects/flisys
+
+##############################
+3. REQUIREMENTS
+##############################
+
+The FliSys runs on most existing web servers, including
+servers for internal use, simply have the following items:
+
+	Apache (2 or newer)
+	ADOdb library
+	Database (MySQL, PostgreSQL, etc)
+	PHP (4 or newer)
+
+##############################
+4. CONFIGURATION
+##############################
+
+The configuration file used by FliSys can be found at:
+
+/includes/configure.php
+
+We will see below the file in details:
+
+The first option is to set the event information:
+
+__NOME				- Event Name to be used by FliSys
+__COORD_NAME		- Name of Event Coordinator
+__COORD_EMAIL		- E-Mail Coordinator
+__LOCAL_NAME		- Name of the place where the event will be held
+__FESTIVAL_DATE		- Event Date
+__LOCAL_LOGOTYPE	- The name of the file containing the logo of the event
+
+The next option is to set the language to be used by FliSys.
+At the moment only the Brazil Portuguese (pt_br) and Spanish Latim America
+(sp_la) are available.
+
+LANG_USED	- to determine the language to be used
+
+Then comes the configuration of your database:
+
+__DB			- Driver to be used to connect to the DB
+__DB_HOST		- The host where the DB
+__DB_DATABASE	- Database to be used to create FliSys tables
+__DB_USER		- User database with r/w permissions
+__DB_PWD		- User Password
+__ADODB_PATH	- Absolute path of where to find the ADOdb library
+__ADODB_DEBUG	- Use true / false to enable or disable debug mode (Test only) 
+
+The tables to be used by FliSys should not be created manually,
+because the system will delete them and (re) create them again with the
+necessary information, so just enter the desired names
+system to create them and use them. It is recommended that the table names
+start with the name of the system to facilitate the identification of
+same, for example: flisys_users.
+
+__TB_USERS		- Table of visitor data
+__TB_OPS		- Table of operators data
+__TB_LECTURES	- Table of lectures data
+__TB_WORKSHOP	- Table of workshops data
+__TB_STATE		- Table containing the states
+__TB_TPLOGRA	- Table containing the types of parks (eg Street, Avenue)
+__TB_CITIES		- Table containing the cities (only Brazil at the moment)
+__TB_COUNTRIES	- Table of countries
+__TB_CORBUS		- Table containing the following trades
+__TB_KNOW		- Table with options for the field "How did you known?"
+__TB_FS			- Table with a list of free softwares available to deploy
+__TB_ARCH		- Table containing the architecture of the free softwares available
+__TB_CERTS		- Table containing the text of Certificates
+
+After finishing the settings of the database, followed by informing the
+regional preferences, such as the state, the city where the event is
+being held, the country and type of street to be used as default:
+
+__DEFAULT_STATE		- Default States
+__DEFAULT_CITY		- Default City
+__DEFAULT_COUNTRY	- Default Country
+__DEFAULT_TP_LOGRA	- Default Park Type
+
+This area is a little customization to meet the
+FLISOL regions where it is performed. Given that visitors are not
+necessarily the region where the event is being held, so the
+system has a large database of cities and countries. Later,
+we wil add all the cities of the participating countries
+in FLISOL (anyone who can help with this step, please contact us).
+
+Now you should inform the field where being FliSys
+executed for the correct functioning of the pages, such as
+http://www.yourdomain.org/flisys/:
+
+PG_HOME		- Domain (site) where FliSys is hosted
+
+And by the end, the temporary directory with RW access to the system to generate
+temporary files to upload data and statistics.
+
+__TEMP_DIR	- Temporary directory with r/w permission
+
+The rest of the settings file is not needed
+changes unless they really need or want to change your
+operation.
+
+#############################
+5. INSTALLATION
+#############################
+
+After entering the configuration information it is time to perform
+FliSys installation. This installation basically consists of creating and
+populate the tables in the database with the necessary information
+for the proper functioning of the system, so make a back-up
+Table of visitors since all existing tables are excluded and
+re-created for inclusion of new data.
+
+IMPORTANT: It is highly recommended to perform a
+backup of existing data, in case you own a previous version of
+FliSys installed.
+
+Made the recommendations, go to "http://www.yourdomain.org/install.php" to
+begin installing the system.
+
+The first step is to display the installer to verify that the
+information had been filled correctly, if everything is ok,
+press the Continue button.
+
+Then the installer will destroy the existing tables and (re) create
+new tables by entering new information for the system operation.
+
+NOTE: Depending on the machine on which the system is
+executed the creation and insertion of data in the tables can take on
+average of 3 to 8 minutes. Mainly in the inclusion of cities
+Brazil, the rest should flow smoothly.
+
+#############################
+6. POST-INSTALLATION
+#############################
+
+When installation is complete, remove the following files to prevent
+errors or accidents:
+
+- install.php
+- install_step2.php
+- install_finish.php
+- install_brazilian_cities.php
+- install_countries.php
+- update.php
+- update_finish.php
+
+##############################
+7. RUNNING
+##############################
+
+Finally, now it's time to start using FliSys. Go to the homepage
+of the system (PG_HOME) and perform authentication to start.
+
+By default, FliSys creates a user with full access level.
+
+User: admin
+Password: admin
+Access Level: Advanced
+
+IMPORTANT: For your safety, after performing the first login,
+change the default user's password or delete it after you
+insert another operator with full access level (Advanced).
+
+###############################
+8. DOCUMENTATION
+###############################
+
+The FliSys does not have extensive documentation, help us by sending
+tutorials, FAQs, HOWTOs and other documents that could help more
+FliSys users.
+
+###############################
+9. GETTING MORE INFORMATION
+###############################
+
+For more information about the system, to become a developer,
+participate in forums, mailing lists, etc. Please go to
+project page at:
+
+http://sourceforge.net/projects/flisys/
+
+--
+Maxx Fonseca
+mxfca at users.sourceforge.net
+09 de Abril de 2011

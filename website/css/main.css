@@ -1,0 +1,660 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Catriel Müller - Pixel in Cloud
+   ========================================================================== */
+
+body {
+    background: url('../img/bg.png') repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+#top {
+    height: 80px;
+    background: #ffffff;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
+#menu ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#menu ul li {
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+    float: left;
+    display: block;
+    background: #303030;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    margin-right: 10px;
+}
+
+#menu ul li a {
+    display: block;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);    
+    color: white;
+    text-decoration: none;
+    height: 77px;
+    padding: 0px 15px;
+    line-height: 77px;
+    font-size: 1.3em;
+    font-family: 'Ubuntu';
+}
+
+.banner {
+    height: 298px;
+    overflow: hidden;
+}
+
+#banner-1 .banner-text {
+    border-bottom: 298px solid red;
+    border-right: 70px solid transparent;
+    height: 0;
+    width: 425px;
+    float: left;
+    z-index: 10;
+    position: relative;
+    margin-right: -70px;
+}
+
+#banner-1 .banner-text-c{
+    padding: 20px 70px 20px 40px;
+    color: #ffffff;
+}
+
+#banner-1 .banner-text-c h2 {
+    font-family: 'Ubuntu';
+    font-size: 1.8em;    
+    margin-bottom: 10px;
+}
+
+#banner-1 .banner-img {    
+    width: 535px;
+    float: left;
+    z-index: -1;
+    position: relative;
+}
+
+#banner-1 .banner-img img {
+    z-index: 9;
+    width: 100%;
+}
+
+#banner-2 .banner-text {
+    border-bottom: 298px solid red;
+    border-left: 70px solid transparent;
+    height: 0;
+    width: 425px;
+    float: left;
+    z-index: 10;
+    position: relative;
+    margin-left: -70px;
+}
+
+#banner-2 .banner-img {    
+    width: 535px;
+    float: left;
+    z-index: -1;
+    position: relative;
+}
+
+#banner-2 .banner-img img {
+    z-index: 9;
+    width: 100%;
+}
+
+#banner-2 .banner-text-c{
+    text-align: right;
+    padding: 20px  40px 20px 70px;
+    color: #ffffff;
+}
+
+#banner-2 .banner-text-c h2 {
+    font-family: 'Ubuntu';
+    font-size: 1.8em;    
+    margin-bottom: 10px;
+}
+
+#content-w {
+    background: #ffffff;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
+#sponsors {
+    margin-top: 10px;
+    background: url(../img/bgsponsors.png) repeat;
+    padding-bottom: 4px;
+}
+
+#sponsors h3 {
+    text-align: center;
+    margin: 10px 0px;
+    font-family: 'Ubuntu';
+    font-weight: normal;
+}
+
+#sponsors-c {
+    width: 132px;
+    padding: 10px;
+    margin-left: 4px;
+    background: #ffffff;
+}
+
+#sponsors-c img {
+    width: 100%;
+}
+
+#sponsors-c a {
+    display: block;
+    margin: 20px 0px;
+}
+
+#content .title{
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    float: left;
+    border-top: 34px solid red;
+    border-right: 25px solid transparent;
+    margin-bottom: -14px;
+}
+
+#content .title a {
+    position: relative;
+    top: -30px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#content .title h3 {
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+#content .content {
+    clear: both;
+    padding: 0px 10px;
+}
+
+p.big {
+    font-weight: bold;
+}
+
+#map {
+    width: 740px;
+    height: 300px;
+}
+
+.hora {
+    
+}
+
+.cronograma {
+    margin: 0px;
+}
+
+h4 {
+    margin: 5px 0px;
+    font-family: 'Ubuntu';
+}
+
+.cronograma li {
+    list-style-image: none;
+    list-style: none;
+    list-style-type: none;
+    border-bottom: 1px solid #dddddd;
+    padding: 5px 0px;
+}
+
+#footer {
+    background: #303030;
+    color: #ffffff;
+    font-family: 'Ubuntu';
+    font-size: 0.8em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#footer .slink {
+    margin: 0px 5px;
+}
+
+.reg-page {
+    display: none;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#reg1 {
+    display: block;
+}
+
+.center {
+    text-align: center;
+}
+
+.reg-page-mid {
+    width: 30%;
+    float: left;
+    text-align: center;
+    margin: 0 10%;
+}
+
+#share-facebook {
+    padding: 5px 30px;
+    line-height: 20px;
+    background: #013895;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.reg-page #submit {
+    padding: 5px 30px;
+    line-height: 20px;
+    background: #013895;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.reg-page .field {
+    overflow: hidden;
+}
+
+.reg-page .field-option {
+    overflow: hidden;
+    height: 42px;
+}
+
+.reg-page .field-option input {
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.reg-page .field input {
+    border: 1px solid #dddddd;
+    height: 30px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.reg-page .field textarea {
+    border: 1px solid #dddddd;
+    height: 100px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.reg-page .field-option label {
+    display: block;
+    width: 250px;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.reg-page .field-checkbox-full {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.reg-page .field-option-full {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.reg-page .field-checkbox-full label {
+    display: block;
+    width: 250px;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.reg-page .field-checkbox-full .inputs {
+    float: left;
+}
+
+.reg-page .field-option-full .inputs {
+    float: left;
+}
+
+.reg-page .field-option-full label {
+    display: block;
+    width: 250px;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.reg-page .field label {
+    display: block;
+    width: 250px;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.reg-page .field-action {
+    text-align: center;
+}
+
+#pixelincloud {
+    text-align: center;
+    margin: 10px 0px; 
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+#social-networks {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    margin: 0 0 0 -32px;
+    width: 32px;
+    height: 66px;
+    z-index: 9999;
+    -webkit-border-radius: 0px 0px 0px 15px;
+    border-radius: 0px 0px 0px 15px;
+    background-color: #f27d00;
+    -webkit-box-shadow: -4px 3px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    -4px 3px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         -4px 3px 5px rgba(50, 50, 50, 0.75);
+}
